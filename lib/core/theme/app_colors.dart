@@ -1,4 +1,4 @@
-import 'package:flutter/widgets.dart';
+import 'package:flutter/material.dart';
 
 class AppColors {
   /// Brend
@@ -10,4 +10,5 @@ class AppColors {
   static const neutralDark = Color(0xFF1B1C1F);
   static const neutralSecondary = Color(0xFF767E8C);
   static const neutralGhost = Color(0xFFA9B0C5);
+  static const neutralWhite = Colors.white;
 }

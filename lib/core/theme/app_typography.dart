@@ -7,6 +7,7 @@ class AppTypography {
   static const sp26 = TextStyle(fontSize: 26);
   static const sp24 = TextStyle(fontSize: 24);
   static const sp18 = TextStyle(fontSize: 18);
+  static const sp14 = TextStyle(fontSize: 14);
 }
 
 extension TextStyleExt on TextStyle {
