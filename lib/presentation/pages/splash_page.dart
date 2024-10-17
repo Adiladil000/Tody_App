@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tody_app/core/constants/app_icons.dart';
+import 'package:tody_app/core/constants/assets.dart';
 
 import 'onboarding_page.dart';
 

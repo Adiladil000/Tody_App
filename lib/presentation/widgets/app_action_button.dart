@@ -18,22 +18,18 @@ class AppActionButton extends StatelessWidget {
         ? DarkAppColors.primary
         : AppColors.primary;
 
-    return ConstrainedBox(
-      constraints: const BoxConstraints(
-        minWidth: 50,
-        // maxWidth: 150,
-        minHeight: 20,
-        maxHeight: 40,
-      ),
-      child: Material(
+    return Material(
+      borderRadius: BorderRadius.circular(20),
+      color: color,
+      elevation: 4,
+      child: InkWell(
+        onTap: onPressed,
         borderRadius: BorderRadius.circular(20),
-        color: color,
-        elevation: 4,
-        child: InkWell(
-          onTap: onPressed,
-          borderRadius: BorderRadius.circular(20),
-          child: Padding(
-            padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 16),
+        child: Padding(
+          padding: const EdgeInsets.symmetric(
+            vertical: 10,
+          ),
+          child: Center(
             child: Text(
               title,
               style: AppTypography.labelLarge.w500
