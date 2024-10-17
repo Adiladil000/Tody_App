@@ -1,14 +1,18 @@
 import 'package:flutter/material.dart';
 
 class AppColors {
-  /// Brend
-  static const brendDark = Color(0xFF096C68);
-  static const brendDefault = Color(0xFF24A19C);
-  static const brendBackgraund = Color(0xFFF2F9F9);
+  static const surface = Colors.white;
+  static const primary = Color(0xFF5946D2);
+  static const onPrimary = Colors.white;
+  static const onSurface = Color(0xFF1C1B1F);
 
-  /// Neutral
-  static const neutralDark = Color(0xFF1B1C1F);
-  static const neutralSecondary = Color(0xFF767E8C);
-  static const neutralGhost = Color(0xFFA9B0C5);
-  static const neutralWhite = Colors.white;
+  static const primaryVariant = Color(0xFF5835E5);
+}
+
+class DarkAppColors {
+  static const surface = Color(0xFF201F24);
+  static const primary = Color(0xFF9373FF);
+  static const onPrimary = Colors.white;
+  static const onSurface = Color(0xFFE6E1E5);
+  static const primaryVariant = Color(0xFFCBBEFF);
 }

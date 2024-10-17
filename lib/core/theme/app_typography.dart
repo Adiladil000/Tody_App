@@ -3,11 +3,11 @@ import 'package:flutter/material.dart';
 class AppTypography {
   static const fontFamily = 'SF Pro Display';
 
-  static const sp28 = TextStyle(fontSize: 28);
-  static const sp26 = TextStyle(fontSize: 26);
-  static const sp24 = TextStyle(fontSize: 24);
-  static const sp18 = TextStyle(fontSize: 18);
-  static const sp14 = TextStyle(fontSize: 14);
+  static const labelLarge = TextStyle(fontSize: 14, height: 20 / 14);
+
+  static const displaySmall = TextStyle(fontSize: 36, height: 44 / 36);
+
+  static const titleMedium = TextStyle(fontSize: 16, height: 24 / 16);
 }
 
 extension TextStyleExt on TextStyle {

@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:tody_app/core/constants/app_icons.dart';
-import 'package:tody_app/presentation/pages/onboarding_page.dart';
 
-import '../../core/theme/app_colors.dart';
-import '../../core/theme/app_typography.dart';
+import 'onboarding_page.dart';
 
 class SplashPage extends StatefulWidget {
   const SplashPage({super.key});
@@ -30,26 +27,15 @@ class _SplashPageState extends State<SplashPage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: AppColors.brendDefault,
+    return const Scaffold(
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            SvgPicture.asset(AppIcons.splashLogo),
-            Text(
-              'Tody App',
-              style: AppTypography.sp26.w600
-                  .copyWith(color: AppColors.neutralWhite),
+            Image(
+              image: AssetImage(AppIcons.splashLogo),
+              fit: BoxFit.cover,
             ),
-            const SizedBox(height: 12),
-            Text(
-              'The best to do list application for you',
-              style: AppTypography.sp14.w400.copyWith(
-                color: AppColors.neutralWhite,
-                height: 20 / 14,
-              ),
-            )
           ],
         ),
       ),

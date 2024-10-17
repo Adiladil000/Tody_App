@@ -1,3 +1,3 @@
 class AppIcons {
-  static const splashLogo = 'assets/icons/splash_logo.svg';
+  static const splashLogo = 'assets/icons/splash_logo.png';
 }
