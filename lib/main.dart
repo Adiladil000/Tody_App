@@ -1,16 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:tody_app/core/theme/app_colors.dart';
 import 'package:tody_app/core/theme/app_typography.dart';
-
-import 'presentation/pages/splash_page.dart';
+import 'package:tody_app/test/my_page.dart';
 
 void main() {
   runApp(const MyApp());
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
   const MyApp({super.key});
 
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -46,7 +50,7 @@ class MyApp extends StatelessWidget {
                   color: AppColors.onPrimary,
                 )),
           )),
-      home: const SplashPage(),
+      home: const MyPage(),
     );
   }
 }
