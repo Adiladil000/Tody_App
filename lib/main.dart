@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:tody_app/core/theme/app_colors.dart';
 import 'package:tody_app/core/theme/app_typography.dart';
 import 'package:tody_app/test/my_page.dart';
+import 'package:tody_app/test/state_scope.dart';
 
 void main() {
   runApp(const MyApp());
@@ -50,7 +51,11 @@ class _MyAppState extends State<MyApp> {
                   color: AppColors.onPrimary,
                 )),
           )),
-      home: const MyPage(),
+      home: const StateScope(
+        color: Colors.green,
+        value: 10,
+        child: MyPage(),
+      ),
     );
   }
 }
