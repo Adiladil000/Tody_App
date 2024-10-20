@@ -1,11 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+import 'package:tody_app/core/constants/app_keys.dart';
 import '../../core/constants/assets.dart';
 import '../../core/constants/routes.dart';
 import '../widgets/app_action_button.dart';
 
-class OnBoardingPage extends StatelessWidget {
+class OnBoardingPage extends StatefulWidget {
   const OnBoardingPage({super.key});
 
+  @override
+  State<OnBoardingPage> createState() => _OnBoardingPageState();
+}
+
+class _OnBoardingPageState extends State<OnBoardingPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -26,11 +33,15 @@ class OnBoardingPage extends StatelessWidget {
                 const SizedBox(height: 80),
                 AppActionButton(
                   title: 'Get Started',
-                  onPressed: () {
-                    Navigator.pushReplacementNamed(
-                      context,
-                      Routes.login.path,
-                    );
+                  onPressed: () async {
+                    final preferences = await SharedPreferences.getInstance();
+                    preferences.setBool(AppKeys.isAppOpened, true);
+                    if (mounted) {
+                      Navigator.pushReplacementNamed(
+                        context,
+                        Routes.login.path,
+                      );
+                    }
                   },
                 )
               ],

@@ -54,7 +54,7 @@ class _MyAppState extends State<MyApp> {
                   color: AppColors.onPrimary,
                 )),
           )),
-      initialRoute: Routes.login.path,
+      initialRoute: Routes.splash.path,
       routes: {
         Routes.splash.path: (context) => const SplashPage(),
         Routes.onboarding.path: (context) => const OnBoardingPage(),
