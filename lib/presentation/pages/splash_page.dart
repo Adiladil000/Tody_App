@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:tody_app/core/constants/assets.dart';
 
-import 'onboarding_page.dart';
+import '../../core/constants/assets.dart';
+import '../../core/constants/routes.dart';
 
 class SplashPage extends StatefulWidget {
   const SplashPage({super.key});
@@ -15,11 +15,9 @@ class _SplashPageState extends State<SplashPage> {
   void initState() {
     Future.delayed(
       const Duration(seconds: 2),
-      () => Navigator.pushReplacement(
+      () => Navigator.pushReplacementNamed(
         context,
-        MaterialPageRoute(
-          builder: (context) => const OnBoardingPage(),
-        ),
+        Routes.onboarding.path,
       ),
     );
     super.initState();

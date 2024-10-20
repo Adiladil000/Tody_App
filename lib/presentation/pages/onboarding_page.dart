@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:tody_app/core/constants/assets.dart';
-import 'package:tody_app/presentation/widgets/app_action_button.dart';
+import '../../core/constants/assets.dart';
+import '../../core/constants/routes.dart';
+import '../widgets/app_action_button.dart';
 
 class OnBoardingPage extends StatelessWidget {
   const OnBoardingPage({super.key});
@@ -23,14 +24,15 @@ class OnBoardingPage extends StatelessWidget {
                 Text('Start using the best To Do app',
                     style: Theme.of(context).textTheme.titleMedium),
                 const SizedBox(height: 80),
-                ConstrainedBox(
-                    constraints: const BoxConstraints(
-                      minWidth: double.infinity,
-                    ),
-                    child: AppActionButton(
-                      title: 'Get Started',
-                      onPressed: () {},
-                    ))
+                AppActionButton(
+                  title: 'Get Started',
+                  onPressed: () {
+                    Navigator.pushReplacementNamed(
+                      context,
+                      Routes.login.path,
+                    );
+                  },
+                )
               ],
             ),
           )

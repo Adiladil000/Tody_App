@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:tody_app/core/theme/app_colors.dart';
-import 'package:tody_app/core/theme/app_typography.dart';
-import 'package:tody_app/test/my_page.dart';
-import 'package:tody_app/test/state_scope.dart';
+
+import 'core/constants/routes.dart';
+import 'core/theme/app_colors.dart';
+import 'core/theme/app_typography.dart';
+import 'presentation/pages/login_page.dart';
+import 'presentation/pages/onboarding_page.dart';
+import 'presentation/pages/splash_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -51,11 +54,12 @@ class _MyAppState extends State<MyApp> {
                   color: AppColors.onPrimary,
                 )),
           )),
-      home: const StateScope(
-        color: Colors.green,
-        value: 10,
-        child: MyPage(),
-      ),
+      initialRoute: Routes.login.path,
+      routes: {
+        Routes.splash.path: (context) => const SplashPage(),
+        Routes.onboarding.path: (context) => const OnBoardingPage(),
+        Routes.login.path: (context) => const LoginPage(),
+      },
     );
   }
 }
